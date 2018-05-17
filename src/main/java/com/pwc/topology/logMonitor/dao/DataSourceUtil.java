@@ -32,17 +32,17 @@ public class DataSourceUtil {
     public static void main(String[] args) {
         JdbcTemplate template = new JdbcTemplate(dataSource);
 
-        Record record = new Record();
+       /* Record record = new Record();
         record.setAppId(1111);
         record.setRuleId(1);
         record.setIsEmail(0);
         record.setIsPhone(1);
         record.setIsClose(0);
-        String insertSql = "INSERT INTO 'log_monitor_rule_record' ('appId', 'ruleId', 'isEmail', 'isPhone', 'isClose', 'updataDate') " +
+        String insertSql = "INSERT INTO log_monitor_rule_record (appId, ruleId, isEmail, isPhone, isClose, updataDate) " +
                 "VALUES (?, ?, ?, ?, ?, ?)";
-        template.update(insertSql, record.getAppId(), record.getRuleId(), record.getIsEmail(), record.getIsPhone(), record.getIsClose(), new Date());
+        template.update(insertSql, record.getAppId(), record.getRuleId(), record.getIsEmail(), record.getIsPhone(), record.getIsClose(), new Date());*/
 
-        String sql = "SELECT `id`,`appId`,`ruleId`,`isEmail`,`isPhone` FROM `log_monitor_rule_record` WHERE appId =1111";
+        String sql = "SELECT id,appId,ruleId,isEmail,isPhone FROM log_monitor_rule_record WHERE appId =1111";
         System.out.println(template.query(sql, new BeanPropertyRowMapper<Record>(Record.class)));
     }
 }
