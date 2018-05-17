@@ -14,6 +14,8 @@ public class LogMonitorDao {
     private JdbcTemplate jdbcTemplate;
 
     public LogMonitorDao(JdbcTemplate jdbcTemplate) {
-        this.jdbcTemplate = new JdbcTemplate();
+        this.jdbcTemplate = new JdbcTemplate(DataSourceUtil.getDataSource());
     }
+
+
 }
