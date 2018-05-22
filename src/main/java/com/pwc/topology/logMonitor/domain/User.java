@@ -5,12 +5,11 @@ package com.pwc.topology.logMonitor.domain;
  * @Date : 17/05/2018 3:48 PM
  */
 public class User {
-
-    private int id;             //应用编号
-    private String name;        //应用名称
-    private int isOnline;       //应用是否在线
-    private int typeId;         //应用所属类别
-    private String userId;      //应用的负责人，多个用户用逗号分开
+    private int id;             //用户编号
+    private String name;        //用户名称
+    private String mobile;      //用户手机
+    private String email;       //用户邮箱
+    private int isValid;        //用户是否可用
 
     public int getId() {
         return id;
@@ -28,28 +27,28 @@ public class User {
         this.name = name;
     }
 
-    public int getIsOnline() {
-        return isOnline;
+    public String getMobile() {
+        return mobile;
     }
 
-    public void setIsOnline(int isOnline) {
-        this.isOnline = isOnline;
+    public void setMobile(String mobile) {
+        this.mobile = mobile;
     }
 
-    public int getTypeId() {
-        return typeId;
+    public String getEmail() {
+        return email;
     }
 
-    public void setTypeId(int typeId) {
-        this.typeId = typeId;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public String getUserId() {
-        return userId;
+    public int getIsValid() {
+        return isValid;
     }
 
-    public void setUserId(String userId) {
-        this.userId = userId;
+    public void setIsValid(int isValid) {
+        this.isValid = isValid;
     }
 
     @Override
@@ -57,9 +56,24 @@ public class User {
         return "User{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", isOnline=" + isOnline +
-                ", typeId=" + typeId +
-                ", userId='" + userId + '\'' +
+                ", mobile='" + mobile + '\'' +
+                ", email='" + email + '\'' +
+                ", isValid=" + isValid +
                 '}';
     }
+
+    /*public static void main(String[] args) throws InvocationTargetException, IllegalAccessException {
+        Message msg = new Message();
+        msg.setKeyword("I am a keyword.");
+        msg.setRuleId("885");
+        msg.setLine("This's the message detail information.");
+        msg.setAppId("883");
+        msg.setAppName("What's the app name.");
+        msg.setIsEmail(1);
+        msg.setIsPhone(1);
+
+        Record record = new Record();
+        BeanUtils.copyProperties(record, msg);
+        System.out.println(record);
+    }*/
 }
