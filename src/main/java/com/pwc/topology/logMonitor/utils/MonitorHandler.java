@@ -42,16 +42,16 @@ public class MonitorHandler {
      */
     public static synchronized void load() {
         if (userList == null) {
-            loadUserList();
+            userList = loadUserList();
         }
         if (appList == null) {
-            loadAppList();
+            appList = loadAppList();
         }
         if (ruleMap == null) {
-            loadRuleMap();
+            ruleMap = loadRuleMap();
         }
         if (userMap == null) {
-            loadUserMap();
+            userMap = loadUserMap();
         }
     }
 
