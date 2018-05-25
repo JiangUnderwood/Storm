@@ -2,9 +2,7 @@ package logMonitor.utils;
 
 
 import logMonitor.dao.LogMonitorDao;
-import com.pwc.topology.logMonitor.domain.*;
 import logMonitor.domain.*;
-import topology.logMonitor.domain.*;
 import logMonitor.mail.MailInfo;
 import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
